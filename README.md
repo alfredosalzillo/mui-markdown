@@ -1,4 +1,4 @@
-# @alfredosalzillo/mui-markdown
+# @alfredo.salzillo/mui-markdown
 
 A Material UI (MUI) component to render Markdown with [react-markdown](https://github.com/remarkjs/react-markdown).
 
@@ -25,22 +25,22 @@ A Material UI (MUI) component to render Markdown with [react-markdown](https://g
 
 ## Installation
 
-To install `@alfredosalzillo/mui-markdown`:
+To install `@alfredo.salzillo/mui-markdown`:
 
 ```bash
-npm install @alfredosalzillo/mui-markdown
+npm install @alfredo.salzillo/mui-markdown
 ```
 
 or with yarn:
 
 ```bash
-yarn add @alfredosalzillo/mui-markdown
+yarn add @alfredo.salzillo/mui-markdown
 ```
 
 ## Usage
 
 ```tsx
-import MuiMarkdown from '@alfredosalzillo/mui-markdown';
+import MuiMarkdown from '@alfredo.salzillo/mui-markdown';
 
 const markdown = `
 # Hello World
@@ -66,8 +66,8 @@ function App() {
 You can import and use different Prism themes. `githubDark` is the default theme, but `githubLight` is also available:
 
 ```tsx
-import MuiMarkdown from '@alfredosalzillo/mui-markdown';
-import { githubLight } from '@alfredosalzillo/mui-markdown/prism-themes/github-light';
+import MuiMarkdown from '@alfredo.salzillo/mui-markdown';
+import { githubLight } from '@alfredo.salzillo/mui-markdown/prism-themes/github-light';
 
 function App() {
   return (
@@ -83,7 +83,7 @@ function App() {
 You can override default components by passing a `components` prop. This is useful if you want to change the style of a specific element:
 
 ```tsx
-import MuiMarkdown from '@alfredosalzillo/mui-markdown';
+import MuiMarkdown from '@alfredo.salzillo/mui-markdown';
 import { Typography } from '@mui/material';
 
 function App() {
@@ -104,7 +104,7 @@ function App() {
 You can add additional `remark` plugins using the `remarkPlugins` prop:
 
 ```tsx
-import MuiMarkdown from '@alfredosalzillo/mui-markdown';
+import MuiMarkdown from '@alfredo.salzillo/mui-markdown';
 import remarkEmoji from 'remark-emoji';
 
 function App() {
@@ -121,7 +121,7 @@ function App() {
 You can pass additional props to the underlying `react-markdown` component using `reactMarkdownOptions`:
 
 ```tsx
-import MuiMarkdown from '@alfredosalzillo/mui-markdown';
+import MuiMarkdown from '@alfredo.salzillo/mui-markdown';
 
 function App() {
   return (
