@@ -115,13 +115,7 @@ const theme: PrismTheme = {
       },
     },
     {
-      types: [
-        "operator",
-        "constant",
-        "boolean",
-        "number",
-        "atrule",
-      ],
+      types: ["operator", "constant", "boolean", "number", "atrule"],
       languages: ["js", "javascript"],
       style: {
         color: "#005cc5",
@@ -135,11 +129,7 @@ const theme: PrismTheme = {
       },
     },
     {
-      types: [
-        "attr-name",
-        "class-name",
-        "function-variable",
-      ],
+      types: ["attr-name", "class-name", "function-variable"],
       languages: ["js", "javascript"],
       style: {
         color: "#e36209",

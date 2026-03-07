@@ -48,9 +48,9 @@ const componentWithPropsOverrides =
     />
   );
 
-const getDefaultComponents = (options: {
-  prismTheme?: PrismTheme;
-} = {}): Components => ({
+const getDefaultComponents = (
+  options: { prismTheme?: PrismTheme } = {},
+): Components => ({
   a: componentWithoutNode(MuiMarkdownLink),
   blockquote: componentWithoutNode(MuiMarkdownBlockquote),
   code: componentWithoutNode(MuiMarkdownInlineCode),
@@ -85,7 +85,10 @@ export type MuiMarkdownProps = {
   remarkPlugins?: Options["remarkPlugins"];
   components?: Components;
   prismTheme?: PrismTheme;
-  reactMarkdownOptions?: Omit<Options, "children" | "remarkPlugins" | "components">;
+  reactMarkdownOptions?: Omit<
+    Options,
+    "children" | "remarkPlugins" | "components"
+  >;
 };
 
 const MuiMarkdown: FC<MuiMarkdownProps> = ({
@@ -104,7 +107,10 @@ const MuiMarkdown: FC<MuiMarkdownProps> = ({
     [remarkPlugins],
   );
 
-  const memoizedDefaultComponents = useMemo<Components>(() => getDefaultComponents({ prismTheme }), [prismTheme]);
+  const memoizedDefaultComponents = useMemo<Components>(
+    () => getDefaultComponents({ prismTheme }),
+    [prismTheme],
+  );
 
   const memoizedComponents = useMemo(
     () => ({
