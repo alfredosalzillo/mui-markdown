@@ -1,1 +1,1 @@
-console.log('Happy developing ✨')
+export { default, type MuiMarkdownProps } from "./MuiMarkdown";
