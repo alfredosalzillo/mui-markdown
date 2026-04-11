@@ -60,13 +60,11 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/remark-heading-id": "^1.0.0",
-    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-react": "^6.0.1",
     "prism-react-renderer": "^2.4.1",
     "react-markdown": "^10.1.0",
-    "rollup-plugin-preserve-directives": "^0.4.0",
     "typescript": "^6.0.2",
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
+    "vite": "^8.0.8"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.0.0",
@@ -80,7 +78,8 @@
   },
   "dependencies": {
     "remark-gfm": "^4.0.1",
-    "remark-heading-id": "^1.0.1"
+    "remark-heading-id": "^1.0.1",
+    "unplugin-dts": "^1.0.0-beta.6"
   },
   "volta": {
     "node": "24.14.0"

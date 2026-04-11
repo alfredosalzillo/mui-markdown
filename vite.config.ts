@@ -1,18 +1,19 @@
-// @ts-expect-error
 import react from "@vitejs/plugin-react";
+import dts from "unplugin-dts/vite";
 import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
 import { resolve } from "node:path";
-import preserveDirectives from "rollup-plugin-preserve-directives";
 
 export default defineConfig({
   plugins: [
     react(),
     dts({
-      insertTypesEntry: true,
-      include: ["src"],
+      copyDtsFiles: true,
+      outDirs: ["dist"],
+      beforeWriteFile: (filePath, content) => ({
+        filePath: filePath.replace(/([\\/])dist\1src\1/, "$1dist$1"),
+        content,
+      }),
     }),
-    preserveDirectives(),
   ],
   build: {
     lib: {
@@ -30,7 +31,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         preserveModules: true,
         preserveModulesRoot: "src",
