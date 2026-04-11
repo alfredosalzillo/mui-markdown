@@ -13,6 +13,7 @@ This file provides context and instructions for AI coding agents working on this
 -   **TypeScript**: Use TypeScript for all code changes. Follow the existing configuration in `tsconfig.json`.
 -   **MUI (Material UI)**: This project is related to MUI components. Ensure any UI-related changes are consistent with MUI patterns.
 -   **Markdown**: The core functionality involves Markdown parsing or rendering. Ensure compatibility with common Markdown specifications.
+-   Keep this `AGENTS.md` technology stack section up to date whenever the project tech stack changes.
 
 ## Development Workflow
 
