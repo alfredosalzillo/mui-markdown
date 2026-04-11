@@ -1,5 +1,6 @@
 /tmp
 /out-tsc
+/.ai-tmp
 
 /dist
 /node_modules

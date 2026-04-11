@@ -20,6 +20,10 @@ This file provides context and instructions for AI coding agents working on this
 2.  **Build**: Before submitting, ensure the project compiles by running `npm run build`.
 3.  **Code Style**: Maintain the existing code style. Use clear and descriptive names for variables and functions.
 
+## Temporary Files
+
+-   **Temporary Directory**: Always place temporary files in the `.ai-tmp` directory.
+
 ## Commit Message Guidelines
 
 You MUST use **Conventional Commits** (compatible with Semantic Release) for all commit messages. This allows for automated versioning and changelog generation.
