@@ -61,6 +61,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/remark-heading-id": "^1.0.0",
     "@vitejs/plugin-react": "^6.0.1",
+    "modular-library": "^0.0.3",
     "prism-react-renderer": "^2.4.1",
     "react-markdown": "^10.1.0",
     "typescript": "^6.0.2",

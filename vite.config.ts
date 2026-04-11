@@ -1,10 +1,13 @@
 import react from "@vitejs/plugin-react";
 import dts from "unplugin-dts/vite";
 import { defineConfig } from "vite";
-import { resolve } from "node:path";
+import modularLibrary from 'modular-library/vite'
 
 export default defineConfig({
   plugins: [
+    modularLibrary({
+      relative: './src'
+    }),
     react(),
     dts({
       copyDtsFiles: true,
@@ -17,25 +20,11 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: {
-        index: resolve(__dirname, "src/index.ts"),
-        "prism-themes/github-dark": resolve(
-          __dirname,
-          "src/prism-themes/github-dark.ts",
-        ),
-        "prism-themes/github-light": resolve(
-          __dirname,
-          "src/prism-themes/github-light.ts",
-        ),
-      },
+      entry: ['src/index.ts', 'src/prism-themes/*.ts', 'src/components/*.tsx'],
       formats: ["es", "cjs"],
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rolldownOptions: {
-      output: {
-        preserveModules: true,
-        preserveModulesRoot: "src",
-      },
       external: [
         "react",
         /^react\//,
