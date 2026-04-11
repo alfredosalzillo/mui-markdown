@@ -45,7 +45,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prepare": "npm run build",
+    "check-exports": "npx modular-library check",
+    "prepare": "npm run build && npm run check && npm run check-exports",
     "lint": "biome lint .",
     "format": "biome format --write .",
     "check": "biome check --write ."
@@ -61,7 +62,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/remark-heading-id": "^1.0.0",
     "@vitejs/plugin-react": "^6.0.1",
-    "modular-library": "^0.0.3",
+    "modular-library": "^0.0.5",
     "prism-react-renderer": "^2.4.1",
     "react-markdown": "^10.1.0",
     "typescript": "^6.0.2",

@@ -1,12 +1,12 @@
 import react from "@vitejs/plugin-react";
+import modularLibrary from "modular-library/vite";
 import dts from "unplugin-dts/vite";
 import { defineConfig } from "vite";
-import modularLibrary from 'modular-library/vite'
 
 export default defineConfig({
   plugins: [
     modularLibrary({
-      relative: './src'
+      relative: "./src",
     }),
     react(),
     dts({
@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: ['src/index.ts', 'src/prism-themes/*.ts', 'src/components/*.tsx'],
+      entry: ["src/index.ts", "src/prism-themes/*.ts", "src/components/*.tsx"],
       formats: ["es", "cjs"],
       fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
