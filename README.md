@@ -151,10 +151,10 @@ function App() {
 
 Ensure you have the following packages installed in your project:
 
-- `@mui/material` (>=7.0.0)
+- `@mui/material` (>=9.0.0)
 - `@emotion/react` (>=11.0.0)
 - `@emotion/styled` (>=11.0.0)
-- `@mui/icons-material` (>=7.0.0)
+- `@mui/icons-material` (>=9.0.0)
 - `react` (>=18.0.0)
 - `react-dom` (>=18.0.0)
 - `react-markdown` (>=10.1.0)
